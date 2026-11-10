@@ -1,0 +1,55 @@
+{
+  "name": "gpui-kit-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for GPUI Kit documentation and component reference",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SinJayXie/gpui-kit-mcp.git"
+  },
+  "homepage": "https://github.com/SinJayXie/gpui-kit-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/SinJayXie/gpui-kit-mcp/issues"
+  },
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "gpui-kit-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "data",
+    "scripts",
+    "README.zh-CN.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "collect": "node scripts/collect.mjs",
+    "build": "tsc",
+    "prepack": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gpui",
+    "gpui-kit",
+    "rust",
+    "desktop",
+    "documentation"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "typescript": "^5.9.3"
+  },
+  "main": "index.js",
+  "author": ""
+}
