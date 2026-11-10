@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { readFileSync } from "node:fs";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -7,7 +8,9 @@ import type { DocLang } from "./types.js";
 import { searchDocs } from "./search.js";
 import { renderCandidates, renderDoc, renderDocsIndex, resolveDoc } from "./docs.js";
 
-const VERSION = "0.1.0";
+const { version: VERSION } = JSON.parse(
+  readFileSync(new URL("../package.json", import.meta.url), "utf8"),
+) as { version: string };
 
 const USAGE = `gpui-kit-mcp v${VERSION} - MCP server for GPUI Kit documentation
 
@@ -17,12 +20,12 @@ Usage:
   gpui-kit-mcp --help       Print this help
 
 Run with npx:
-  npx gpui-kit-mcp
+  npx @dishuyl/gpui-kit-mcp
 
 MCP client configuration:
   {
     "mcpServers": {
-      "gpui-kit": { "command": "npx", "args": ["-y", "gpui-kit-mcp"] }
+      "gpui-kit": { "command": "npx", "args": ["-y", "@dishuyl/gpui-kit-mcp"] }
     }
   }
 `;

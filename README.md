@@ -16,7 +16,7 @@ It bundles the full GPUI Kit documentation into a local corpus so AI clients suc
 ## Quick start
 
 ```bash
-npx -y gpui-kit-mcp --help
+npx -y @dishuyl/gpui-kit-mcp --help
 ```
 
 ### MCP client configuration
@@ -28,7 +28,7 @@ For Claude Desktop, Cursor, Trae and other MCP clients:
   "mcpServers": {
     "gpui-kit": {
       "command": "npx",
-      "args": ["-y", "gpui-kit-mcp"]
+      "args": ["-y", "@dishuyl/gpui-kit-mcp"]
     }
   }
 }
@@ -41,7 +41,7 @@ On Windows, if the client cannot launch `npx` directly, use:
   "mcpServers": {
     "gpui-kit": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "gpui-kit-mcp"]
+      "args": ["/c", "npx", "-y", "@dishuyl/gpui-kit-mcp"]
     }
   }
 }

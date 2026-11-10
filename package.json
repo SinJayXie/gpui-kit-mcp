@@ -1,6 +1,6 @@
 {
-  "name": "gpui-kit-mcp",
-  "version": "0.1.0",
+  "name": "@dishuyl/gpui-kit-mcp",
+  "version": "1.0.0",
   "description": "MCP server for GPUI Kit documentation and component reference",
   "repository": {
     "type": "git",
@@ -40,7 +40,8 @@
     "documentation"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
@@ -49,7 +50,5 @@
   "devDependencies": {
     "@types/node": "^24.10.0",
     "typescript": "^5.9.3"
-  },
-  "main": "index.js",
-  "author": ""
+  }
 }

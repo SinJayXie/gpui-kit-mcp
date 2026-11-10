@@ -16,7 +16,7 @@
 ## 快速开始
 
 ```bash
-npx -y gpui-kit-mcp --help
+npx -y @dishuyl/gpui-kit-mcp --help
 ```
 
 ### 配置 MCP 客户端
@@ -28,7 +28,7 @@ Claude Desktop、Cursor、Trae 等客户端：
   "mcpServers": {
     "gpui-kit": {
       "command": "npx",
-      "args": ["-y", "gpui-kit-mcp"]
+      "args": ["-y", "@dishuyl/gpui-kit-mcp"]
     }
   }
 }
@@ -41,7 +41,7 @@ Windows 上如果客户端无法直接拉起 `npx`，改用：
   "mcpServers": {
     "gpui-kit": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "gpui-kit-mcp"]
+      "args": ["/c", "npx", "-y", "@dishuyl/gpui-kit-mcp"]
     }
   }
 }
